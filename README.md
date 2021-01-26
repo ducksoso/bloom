@@ -1,7 +1,5 @@
 # bloom
-bloom filter
-
-
+bloom filter - 布隆过滤器，使用的时候需要转化成`[]byte`格式进行哈希
 
 
 This implementation accepts keys for setting and testing as `[]byte`. Thus, to
@@ -30,30 +28,8 @@ bloom filter for a set of size _n_:
 Given the particular hashing scheme, it's best to be empirical about this. Note
 that estimating the FP rate will clear the Bloom filter.
 
-Discussion here: [Bloom filter](https://groups.google.com/d/topic/golang-nuts/6MktecKi1bE/discussion)
-
-Godoc documentation: https://godoc.org/github.com/willf/bloom
-
 ## Installation
 
 ```bash
-go get -u github.com/willf/bloom
-```
-
-## Contributing
-
-If you wish to contribute to this project, please branch and issue a pull request against master ("[GitHub Flow](https://guides.github.com/introduction/flow/)")
-
-This project include a Makefile that allows you to test and build the project with simple commands.
-To see all available options:
-```bash
-make help
-```
-
-## Running all tests
-
-Before committing the code, please check if it passes all tests using (note: this will install some dependencies):
-```bash
-make deps
-make qa
+go get -u github.com/ducksoso/bloom
 ```

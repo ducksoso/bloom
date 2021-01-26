@@ -282,7 +282,7 @@ func (f *BloomFilter) EstimateFalsePositiveRate(n uint) (fpRate float64) {
 	for i := uint32(0); i < rounds; i++ {
 		binary.BigEndian.PutUint32(n1, i+uint32(n)+1)
 		if f.MightContain(n1) {
-			//fmt.Printf("%v failed.\n", i+uint32(n)+1)
+			// fmt.Printf("%v failed.\n", i+uint32(n)+1)
 			fp++
 		}
 	}
